@@ -7,6 +7,7 @@ export default async function handler(req, res) {
     if (req.method === "POST") {
     const gamesCollection = db.collection("games");
     const result = await gamesCollection.insertOne(req.body);
+    res.status(201).json({ message: "Data inserted successfully!" });
   }
 
   if (req.method === "PUT") {
@@ -19,6 +20,7 @@ export default async function handler(req, res) {
     const updateResult = await editionsCollection.updateOne({ teamId: req.body.teamId, edition:1}, {$set:{points: req.body.points,
     wins: req.body.wins,
     losses: req.body.losses}});
+    res.status(201).json({ message: "Data updated successfully!" });
     }
   }
 

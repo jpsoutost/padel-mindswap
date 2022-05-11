@@ -8,6 +8,7 @@ export default function Edition1({teams}) {
   const [lastGames, setLastGames]= useState([]);
   const [loadedGames, setLoadedGames]= useState(false);
   const [updatedTeams, setUpdatedTeams]= useState(teams);
+  const [addGameButton, setAddGameButton] = useState(<button className="submit-button" type="submit">Add Game</button>);
 
   if (loadedGames===false){
     getLastGames();
@@ -52,6 +53,8 @@ export default function Edition1({teams}) {
     async function newGameSubmit(e) {
        
       e.preventDefault();
+
+      setAddGameButton(<button className="submit-button" disable={true}>Add Game</button>)
       
       const form = e.target;
       const team1Input = form.elements.namedItem("team1");
@@ -213,7 +216,7 @@ export default function Edition1({teams}) {
     </select>
     <input name="team2-score" placeholder="0"  type="number" min="0" max="3" required />
     </div>
-      <button className="submit-button" type="submit">Add Game</button>
+      {addGameButton}
     </form> : <button className="add-new-game-button" onClick={()=>setAddGameButtonIsToggled(true)}>Add New Game</button>}
     </div>
     <div className="last-games">
@@ -227,9 +230,9 @@ export default function Edition1({teams}) {
       <h1>Edition 1 Champions</h1>
       <header className="pos-header">
 							<h2 className="edition-table-header-1" >Players</h2>
-							<h2 className="edition-table-header">Points</h2>
-              <h2 className="edition-table-header" >Wins</h2>
-							<h2 className="edition-table-header">Losses</h2>
+							<h2 className="edition-table-header">P</h2>
+              <h2 className="edition-table-header" >W</h2>
+							<h2 className="edition-table-header">L</h2>
 						</header>
             
           {updatedTeams.map((team) => (
