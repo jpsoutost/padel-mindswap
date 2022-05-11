@@ -22,7 +22,7 @@ export default function Edition1({teams}) {
   
   async function updateScores(team1,team2,team1Score,team2Score){
     
-    const teamsUpdated = await fetch("/api/edition1", {
+    const teamsUpdated = await fetch("https://mindswap-padel.vercel.app/api/edition1", {
       method: "GET",
     });
     const teamsUpdatedJson = await teamsUpdated.json();
@@ -94,7 +94,7 @@ export default function Edition1({teams}) {
         losses: winner_loser_updated_scores[7]
       }
       
-      const response1 = await fetch("/api/edition1", {
+      const response1 = await fetch("https://mindswap-padel.vercel.app/api/edition1", {
         method: "POST",
         body: JSON.stringify(game),
         headers: 
@@ -103,11 +103,8 @@ export default function Edition1({teams}) {
           "application/json",
         },
       });
-      
-      const data = await response1.json();
-      console.log(data);
 
-      await fetch("/api/edition1", {
+      await fetch("https://mindswap-padel.vercel.app/api/edition1", {
         method: "PUT",
         body: JSON.stringify(winnerTeamObject),
         headers: 
@@ -117,7 +114,7 @@ export default function Edition1({teams}) {
         },
       });
 
-      await fetch("/api/edition1", {
+      await fetch("https://mindswap-padel.vercel.app/api/edition1", {
         method: "PUT",
         body: JSON.stringify(loserTeamObject),
         headers: 
@@ -127,7 +124,7 @@ export default function Edition1({teams}) {
         },
       });
 
-      const teamsUpdated = await fetch("/api/edition1", {
+      const teamsUpdated = await fetch("https://mindswap-padel.vercel.app/api/edition1", {
         method: "GET",
       });
 
@@ -139,7 +136,7 @@ export default function Edition1({teams}) {
     }
 
     async function getLastGames(){
-      const lastGames = await fetch("/api/edition1", {
+      const lastGames = await fetch("https://mindswap-padel.vercel.app/api/edition1", {
         method: "PUT",
         body: JSON.stringify({collection:"games"}),
         headers: 
