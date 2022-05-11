@@ -14,7 +14,7 @@ export default function Players({ players }) {
           <a className="a-header-clickable" href="/edition1">Edition 1</a>
         </nav>
       </header>
-
+<main className="homepage-main">
       <ol className="all-time-champions-table">
       <h1>All-Time Champions</h1>
       <header className="pos-header">
@@ -33,7 +33,9 @@ export default function Players({ players }) {
           </li>
         ))}
       </ol>
+      </main>
 </>
+
   );
 }
 export async function getServerSideProps() {
