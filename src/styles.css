@@ -1,0 +1,246 @@
+html{
+    background-color: black;
+    color: white;
+    font-family:monospace;
+    font-size: 120%;
+}
+body {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.general-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    border-bottom: solid 2px white;
+    height: 7vh;
+    width: 100vw;
+    font-size: 130%;
+}
+
+.firt-part-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50%;
+}
+.logo-header{
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.padel-logo{
+    font-size:150%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.a-header-clickable:hover {
+    text-decoration: underline;
+}
+
+.a-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    width: 30%;
+}
+
+.all-time-champions-table{
+    width:90%;
+    text-align: center;
+}
+
+.all-time-photo{
+    width:20%;
+    aspect-ratio: auto;
+}
+
+.all-time-country{
+    width:20%;
+    aspect-ratio: auto;
+}
+
+.player{
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+.pos{
+    width:100%; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.all-time-td{
+    width: 25%;
+    font-size: 20px;
+}
+.pos-header{
+    width: 100%;
+    display: flex;
+}
+.all-time-header{
+    width: 25%;
+}
+.all-time-header-1{
+    width: 50%;
+}
+.add-new-game-feature{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 99.7%;
+    height:100px;
+    border: solid 2px blue;
+    margin-left: 0px;
+}
+.add-new-game-button{
+    padding: 10px 40px 10px 40px ;
+    border-radius: 25px;
+    border: solid 2px blue;
+}
+
+.add-new-game-form{
+    display: flex;
+    flex-wrap:wrap;
+    width:70%;
+    justify-content: center;
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+select{
+    width:60%;
+    margin: 0px 10px 0px 10px;
+}
+
+.game-result{
+    width: 80%;
+    margin: 10px;
+    border: solid white 2px;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 11px;
+}
+.team-result{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+    border: solid black 2px;
+}
+.result-player{
+    display: flex;
+    width: 30%;
+    justify-content: flex-start;
+    border-right: 1px solid grey;
+}
+
+.edition-champions-table{
+    width:70%;
+    text-align: center;
+}
+
+ol{
+    padding-left:0px;
+}
+
+.edition-table-header-1{
+    width: 50%;
+}
+
+
+.edition-table-header{
+    width: 16.6%;
+}
+
+.team{
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.team-pos{
+    width:100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.edition-table-td-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+}
+
+.edition-table-td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16.6%;
+}
+
+.last-games{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-edition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edition-champions-table > :nth-child(3) {
+    color: black;
+    background-color: gold;
+}
+
+.edition-champions-table > :nth-child(4) {
+    color: black;
+    background-color: silver;
+}
+
+.edition-champions-table > :nth-child(5) {
+    color: black;
+    background-color: #bb8f4c;
+}
+
+
+
+
+
+
+
+
+
+
