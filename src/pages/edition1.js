@@ -73,6 +73,11 @@ export default function Edition1({teams}) {
         return;
       }
 
+      if (team1Score < 3 && team1Score < 3){
+        console.log("game is only finished when one of the teams reach 3 points");
+        return;
+      }
+
       const winner_loser_updated_scores = await updateScores(team1,team2,team1Score,team2Score)
     
       const game = {
